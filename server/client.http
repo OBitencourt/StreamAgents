@@ -1,1 +1,13 @@
-GET http://localhost:3333/rooms
+
+@baseUrl = http://localhost:3333
+
+
+# Health check
+
+GET {{baseUrl}}/health
+
+
+###
+
+# Get rooms 
+GET {{baseUrl}}/rooms
