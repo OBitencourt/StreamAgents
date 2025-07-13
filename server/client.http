@@ -11,3 +11,16 @@ GET {{baseUrl}}/health
 
 # Get rooms 
 GET {{baseUrl}}/rooms
+
+
+###
+
+# Create Room
+
+POST {{baseUrl}}/rooms
+Content-Type: application/json
+
+{
+    "name": "Sala Personalizada",
+    "description": "Sala Personalizada criada por mim através do client http"
+}
