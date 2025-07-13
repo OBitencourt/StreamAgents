@@ -10,12 +10,14 @@ GET {{baseUrl}}/health
 ###
 
 # Get rooms 
+# @name getRooms
 GET {{baseUrl}}/rooms
 
 
 ###
 
 # Create Room
+# @name createRoom
 
 POST {{baseUrl}}/rooms
 Content-Type: application/json
@@ -24,3 +26,16 @@ Content-Type: application/json
     "name": "Sala Personalizada",
     "description": "Sala Personalizada criada por mim através do client http"
 }
+
+###
+
+@roomId = {{getRooms.response.body.$.[0].id}}
+
+###
+
+# Get room questions
+# @name getQuestions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+
+###
